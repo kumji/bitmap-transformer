@@ -1,0 +1,27 @@
+{
+  "name": "bitmap-transformer",
+  "version": "1.0.1",
+  "description": "Bitmap-transformer",
+  "main": "bitmaptransformer.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumji/bitmap-transformer.git"
+  },
+  "author": "kumji.p@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kumji/bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/kumji/bitmap-transformer#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-mocha": "^2.1.3"
+  }
+}
