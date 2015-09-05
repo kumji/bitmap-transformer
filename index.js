@@ -1,18 +1,18 @@
 'use strict';
 
 
-var FileReadImg = require('./lib/filecontrol.js').fileReadImg();
-var FileSaveImg = require('./lib/filecontrol.js').fileSaveImg();
+var ReadImg = require('./lib/filecontrol.js').ReadImg();
+var WriteImg = require('./lib/filecontrol.js').WriteImg();
 var EventEmitter = require('events').EventEmitter;
 var BitmapConstructor = require('./lib/bitmap-constructor.js');
 
-var readImg = new FileReadImg();
-var saveImg = new FileSaveImg();
+var readImg = new ReadImg();
+var writeImg = new WriteImg();
 var eventEmitter = new EventEmitter();
 var bitmapConstructor = new BitmapConstructor();
 
 
-fileCtrl.readImg('./img/coffee.bmp', function(err,data) {
+readImg('./img/coffee.bmp', function(err,data) {
 	if(err) {
 		console.log('error to load.');
 	}
@@ -23,7 +23,18 @@ fileCtrl.readImg('./img/coffee.bmp', function(err,data) {
 });
 
 
+
+
+
+
 eventEmitter.on('bitmapControl', function() {
 	bitmap = new Buffer(data);
 	bitmapConstructor.Bitmap(bitmap);
 });
+
+
+evenEmitter.on('writeImg', function(buf) {
+	writeImg('./img/NewCoffee.bmp', buf, function(){
+		if(err) 
+	})
+})
